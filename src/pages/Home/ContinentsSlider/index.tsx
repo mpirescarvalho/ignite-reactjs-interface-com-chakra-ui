@@ -2,6 +2,7 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box } from '@chakra-ui/react';
 
+import { getContinents } from '../../../services/data';
 import { Slide } from './Slide';
 
 import 'swiper/css';
@@ -10,38 +11,7 @@ import 'swiper/css/pagination';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const continents = [
-	{
-		title: 'Europa',
-		subtitle: 'O continente mais antigo',
-		image: '/europa.jpg',
-	},
-	{
-		title: 'Ásia',
-		subtitle: 'O maior continente',
-		image: '/asia.jfif',
-	},
-	{
-		title: 'América do Sul',
-		subtitle: 'A maior biodiversidade',
-		image: '/south-america.jfif',
-	},
-	{
-		title: 'América do Norte',
-		subtitle: 'O continente mais diverso',
-		image: '/north-america.jfif',
-	},
-	{
-		title: 'África',
-		subtitle: 'A maior diversidade étnica',
-		image: '/africa.jfif',
-	},
-	{
-		title: 'Oceania',
-		subtitle: 'O continente mais isolado',
-		image: '/oceania.jfif',
-	},
-];
+const continents = getContinents();
 
 export function ContinentsSlider() {
 	return (
@@ -52,13 +22,14 @@ export function ContinentsSlider() {
 			pagination={{ clickable: true }}
 			navigation
 		>
-			{continents.map((continent, index) => (
-				<SwiperSlide key={index}>
+			{continents.map((continent) => (
+				<SwiperSlide key={continent.id}>
 					<Slide
 						title={continent.title}
 						subtitle={continent.subtitle}
 						backgroundSrc={continent.image}
 						backgroundAlt={continent.title}
+						src={continent.src}
 					/>
 				</SwiperSlide>
 			))}
