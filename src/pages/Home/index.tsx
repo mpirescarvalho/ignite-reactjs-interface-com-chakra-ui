@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Box, VStack } from '@chakra-ui/react';
 
 import { SafeContentArea } from '../../components/SafeContentArea';
@@ -10,6 +11,10 @@ import { TravelTypes } from './TravelTypes';
 export default function Home() {
 	return (
 		<Box>
+			<Head>
+				<title>Home | worldtrip</title>
+			</Head>
+
 			<Banner />
 			<TravelTypes mt="28" />
 			<Divider mt="20" />
