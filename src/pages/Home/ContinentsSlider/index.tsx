@@ -2,7 +2,6 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box } from '@chakra-ui/react';
 
-import { getContinents } from '../../../services/data';
 import { Slide } from './Slide';
 
 import 'swiper/css';
@@ -11,9 +10,19 @@ import 'swiper/css/pagination';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const continents = getContinents();
+interface Continent {
+	id: string;
+	title: string;
+	subtitle: string;
+	image: string;
+	src: string;
+}
 
-export function ContinentsSlider() {
+interface ContinentsSliderProps {
+	continents: Continent[];
+}
+
+export function ContinentsSlider({ continents }: ContinentsSliderProps) {
 	return (
 		<Box
 			as={Swiper}
