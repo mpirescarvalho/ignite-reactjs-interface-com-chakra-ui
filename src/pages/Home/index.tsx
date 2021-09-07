@@ -5,7 +5,7 @@ import { SafeContentArea } from '../../components/SafeContentArea';
 import { Banner } from './Banner';
 import { ChooseContinentText } from './ChooseContinentText';
 import { Divider } from './Divider';
-import { Slider } from './Slider';
+import { ContinentsSlider } from './ContinentsSlider';
 import { TravelTypes } from './TravelTypes';
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 			<SafeContentArea maxW="1240px" mt="12" mb="10">
 				<VStack spacing="12" align="center" justify="center">
 					<ChooseContinentText />
-					<Slider />
+					<ContinentsSlider />
 				</VStack>
 			</SafeContentArea>
 		</Box>

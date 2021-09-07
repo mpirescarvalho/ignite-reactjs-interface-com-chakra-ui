@@ -43,7 +43,7 @@ const continents = [
 	},
 ];
 
-export function Slider() {
+export function ContinentsSlider() {
 	return (
 		<Box
 			as={Swiper}
