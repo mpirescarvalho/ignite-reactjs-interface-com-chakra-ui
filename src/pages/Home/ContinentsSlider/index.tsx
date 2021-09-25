@@ -15,7 +15,7 @@ interface Continent {
 	title: string;
 	subtitle: string;
 	image: string;
-	src: string;
+	slug: string;
 }
 
 interface ContinentsSliderProps {
@@ -38,7 +38,7 @@ export function ContinentsSlider({ continents }: ContinentsSliderProps) {
 						subtitle={continent.subtitle}
 						backgroundSrc={continent.image}
 						backgroundAlt={continent.title}
-						src={continent.src}
+						src={`/${continent.slug}`}
 					/>
 				</SwiperSlide>
 			))}

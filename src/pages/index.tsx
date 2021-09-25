@@ -15,7 +15,7 @@ interface Continent {
 	title: string;
 	subtitle: string;
 	image: string;
-	src: string;
+	slug: string;
 }
 
 interface HomeProps {
