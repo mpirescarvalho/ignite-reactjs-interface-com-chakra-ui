@@ -4,12 +4,11 @@ import { Box } from '@chakra-ui/react';
 
 import { getContinents } from '../../services/data';
 
+import { Banner } from './Banner';
+
 interface Continent {
-	id: string;
 	title: string;
-	subtitle: string;
-	image: string;
-	slug: string;
+	banner: string;
 }
 
 interface ContinentProps {
@@ -25,7 +24,7 @@ export default function Continent({ continent }: ContinentProps) {
 				<title>{continent.title} | worldtrip</title>
 			</Head>
 
-			<div>{continent.subtitle}</div>
+			<Banner title={continent.title} image={continent.banner} />
 		</Box>
 	);
 }
@@ -44,6 +43,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+	//obs: only europa has the complete data
 	const continentData = getContinents({ slug: params.continent as string })[0];
 	const europaData = getContinents({ id: 'europa' })[0];
 
