@@ -1,7 +1,7 @@
 import { Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 
-import { SafeContentArea } from '../../../components/SafeContentArea';
+import { SafeContentArea } from '../../components/SafeContentArea';
 
 interface BannerProps {
 	title: string;

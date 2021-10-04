@@ -4,11 +4,17 @@ import { Box } from '@chakra-ui/react';
 
 import { getContinents } from '../../services/data';
 
+import { SafeContentArea } from '../../components/SafeContentArea';
 import { Banner } from './Banner';
+import { Info } from './Info';
 
 interface Continent {
 	title: string;
 	banner: string;
+	description: string;
+	countriesCount: number;
+	languagesCount: number;
+	citiesInTop100Count: number;
 }
 
 interface ContinentProps {
@@ -16,8 +22,6 @@ interface ContinentProps {
 }
 
 export default function Continent({ continent }: ContinentProps) {
-	console.log(continent);
-
 	return (
 		<Box>
 			<Head>
@@ -25,6 +29,15 @@ export default function Continent({ continent }: ContinentProps) {
 			</Head>
 
 			<Banner title={continent.title} image={continent.banner} />
+
+			<SafeContentArea>
+				<Info
+					description={continent.description}
+					countriesCount={continent.languagesCount}
+					languagesCount={continent.languagesCount}
+					citiesInTop100Count={continent.citiesInTop100Count}
+				/>
+			</SafeContentArea>
 		</Box>
 	);
 }
