@@ -5,8 +5,16 @@ import { Box } from '@chakra-ui/react';
 import { getContinents } from '../../services/data';
 
 import { SafeContentArea } from '../../components/SafeContentArea';
+import { CitiesInTop100 } from './CitiesInTop100';
 import { Banner } from './Banner';
 import { Info } from './Info';
+
+interface City {
+	city: string;
+	country: string;
+	image: string;
+	countryFlag: string;
+}
 
 interface Continent {
 	title: string;
@@ -15,6 +23,7 @@ interface Continent {
 	countriesCount: number;
 	languagesCount: number;
 	citiesInTop100Count: number;
+	citiesInTop100: Array<City>;
 }
 
 interface ContinentProps {
@@ -37,6 +46,8 @@ export default function Continent({ continent }: ContinentProps) {
 					languagesCount={continent.languagesCount}
 					citiesInTop100Count={continent.citiesInTop100Count}
 				/>
+
+				<CitiesInTop100 cities={continent.citiesInTop100} />
 			</SafeContentArea>
 		</Box>
 	);
