@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from '@chakra-ui/react';
+import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 
 import { CityCard } from './CityCard';
 
@@ -20,17 +20,11 @@ export function CitiesInTop100({ cities }: CitiesInTop100Props) {
 				Cidades +100
 			</Text>
 
-			<HStack
-				mt="40px"
-				spacing="45px"
-				wrap="wrap"
-				align="center"
-				justify="space-between"
-			>
+			<SimpleGrid mt="40px" columns={4} spacing={45}>
 				{cities.map((city) => (
 					<CityCard key={city.city} city={city} />
 				))}
-			</HStack>
+			</SimpleGrid>
 		</Box>
 	);
 }

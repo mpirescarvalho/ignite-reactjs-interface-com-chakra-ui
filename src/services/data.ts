@@ -37,35 +37,35 @@ const data = [
 				country: 'Reino Unido',
 				image:
 					'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-				countryFlag: 'https://restcountries.eu/data/gbr.svg',
+				countryFlag: '/united-kingdom.png',
 			},
 			{
 				city: 'Paris',
 				country: 'França',
 				image:
 					'https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
-				countryFlag: 'https://restcountries.eu/data/fra.svg',
+				countryFlag: '/france.png',
 			},
 			{
 				city: 'Roma',
 				country: 'Itália',
 				image:
 					'https://images.unsplash.com/photo-1610529028227-18045bd9960f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-				countryFlag: 'https://restcountries.eu/data/ita.svg',
+				countryFlag: '/italy.png',
 			},
 			{
 				city: 'Praga',
 				country: 'República Tcheca',
 				image:
 					'https://images.unsplash.com/photo-1458150945447-7fb764c11a92?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-				countryFlag: 'https://restcountries.eu/data/cze.svg',
+				countryFlag: '/czech-republic.png',
 			},
 			{
 				city: 'Amsterdã',
 				country: 'Países Baixos',
 				image:
 					'https://images.unsplash.com/photo-1536880756060-98a6a140f0a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-				countryFlag: 'https://restcountries.eu/data/nld.svg',
+				countryFlag: '/netherlands',
 			},
 		],
 	},
